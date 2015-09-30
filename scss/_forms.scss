@@ -1,0 +1,52 @@
+
+//-- formularios
+
+.form{
+	width: 100%;
+	display: inline-block;
+	margin : 20px 0;
+
+	.has-error{ 
+	input, textarea, select{
+		margin-bottom: 8px;
+	}
+	.label{
+		position: relative;
+			&:before{
+				content : " ";
+				display: block;
+				position: absolute;
+				width: 1px;
+				border : solid 8px transparent;
+				border-bottom-color : $warning;
+				top : -15px;
+				left: 5px;
+			}
+	    }
+	}
+
+	h4{
+		margin : 40px 0 20px 0;
+		font-weight: bold;
+	}
+
+	.alert{
+		background: $error-bg !important;
+		color: $error;
+		padding: 10px 20px 10px 35px;
+		position: relative;
+
+		i.mdi-action-report-problem{
+			position: absolute;
+			left: 10px;
+			top : 8px;
+			font-size: 20px;
+
+		}
+		&.alert-success{
+			background: lighten($green, 32%) !important;
+			color: darken($green, 15%);
+		}
+	}
+	
+}

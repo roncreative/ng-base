@@ -1,0 +1,9 @@
+<div ng-class="{'form-group': true, 'field-required': required && field.$invalid, 'field-error': field.$invalid && field.$dirty}">
+    <label for="{{ id }}" class="control-label">{{ label }}</label>
+    <select ng-model="model" id="{{ id }}" ng-required="{{ ngrequired }}" class="form-control">
+      <option ng-repeat="option in options" value="{{ option.value }}">{{ option.text }}</option>
+    </select>
+    <div class="clearfix"></div>
+    <span ng-show="field.$invalid && field.$dirty" class="label label-danger">{{ field.message }}</span>
+</div>
+

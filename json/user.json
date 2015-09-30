@@ -1,0 +1,7 @@
+{ 
+	"email"   : { "ico" : "glyphicon glyphicon-envelope", "value" : "roncreative@gmail.com" },
+	"name"    : { "ico" : "glyphicon glyphicon-user", "value" : "Ronal" },
+	"sex"     : { "ico" : "glyphicon glyphicon-king", "value" : "Masculino" },
+	"address" : { "ico" : "glyphicon glyphicon-map-marker", "value" : "Avenida # calle #, Casa #" }
+}
+

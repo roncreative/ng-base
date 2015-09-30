@@ -1,0 +1,8 @@
+<div class="fancy-radio">
+   <div class="wrap-radio">
+      <input type="{{ type }}" ng-model="model" id="id_{{ id }}" ng-required="required">
+   </div>
+   <label for="id_{{ id }}" class="box-none">{{ label }}</label>
+   
+    <span ng-show="field.$invalid && field.$dirty" class="label label-danger">{{ field.message }}</span>
+</div>

@@ -1,0 +1,9 @@
+<div ng-class="{'checkbox form-group' : true, 'field-required': required && field.$invalid, 'field-error': field.$invalid && field.$dirty}">
+     
+     <label for="{{ id }}" class="control-label box-none">
+        <input type="checkbox" ng-model="model" id="{{ id }}" ng-required="{{ ngrequired }}">
+         {{ label }}
+     </label>
+     <div class="clearfix"></div>
+     <span ng-show="field.$invalid && field.$dirty" class="label label-danger">{{ field.message }}</span>
+</div>

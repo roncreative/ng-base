@@ -1,0 +1,6 @@
+<div ng-class="{field: true, 'field-required': required && field.$invalid, 'field-error': field.$invalid && field.$dirty}">
+    <label for="{{ id }}" class="control-label">{{ label }}</label>
+    <input type="time" ng-model="model" id="{{ id }}" step="900" ng-required="{{ ngrequired }}">
+    <div class="clear"></div>
+    <span ng-show="field.$invalid && field.$dirty" class="label label-danger">{{ field.message }}</span>
+</div>

@@ -1,0 +1,36 @@
+<section id="logincontrol">
+    <div class="container">
+
+        <h3>{{ lang.title }}</h3>
+
+        <form name="form" class="form" novalidate>
+
+                    <field model="user.email"
+                           type="email"
+                           label="lang.login.label"
+                           placeholder="lang.login.placeholder"
+                           ng-required="true">
+                    </field>
+
+                    <password model="user.password"
+                           label="lang.pass.label"
+                           placeholder="******"
+                           type="password"
+                           ng-required="true">
+                    </password>
+
+                    <button ng-class="{ 'disabled' : form.$invalid }" class="btn btn-success icon" ng-click="login(user)" >{{ lang.btns.enter }} </button>
+
+                    <a href="#/register" class="btn btn-primary icon">{{ lang.btns.register }}</a>
+
+                    <div class="alert alert-dismissable" ng-class="{'alert-danger' : !message.done, 'alert-success' : message.done }" ng-show="message.go" ng-click="message.go = false">
+                       <strong>{{ message.text }}</strong>
+                    </div>
+
+        </form>
+    </div>
+
+</section>
+
+
+

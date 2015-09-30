@@ -1,0 +1,13 @@
+<div ng-class="{'form-group': true, 'field-required': required, 'field-error': field.$invalid && field.$dirty}">
+    <label class="control-label">{{ label }}</label>
+    <div class="radio radio-primary" ng-repeat="option in options">
+        <label>
+            <input type="radio" name="{{ name }}" ng-model="$parent.model" value="{{ option.value }}" id="{{ id }}_{{ option.value }}" ng-required="{{ ngrequired }}">
+            {{ option.text }}
+        </label>
+    </div>
+    <div class="clearfix"></div>
+    <span ng-show="field.$invalid && field.$dirty" class="label label-danger">{{ field.message }}</span>
+</div>
+
+

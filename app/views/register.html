@@ -1,0 +1,78 @@
+<section id="logincontrol">
+    <div class="container">
+
+        <h3>{{lang.title}}</h3>
+
+        <form name="form" class="form" novalidate>
+
+
+                <field model="user.email"
+                       type="email"
+                       label="lang.email.label"
+                       placeholder="lang.email.placeholder"
+                       ngrequired="true">
+                </field>
+
+                <field model="user.name"
+                       type="text"
+                       label="lang.name.label"
+                       placeholder="lang.name.placeholder"
+                       ngrequired="false">
+                </field>
+
+                <radios model="user.sex"
+                       type="radios"
+                       label="lang.sex.label"
+                       options="lang.sex.options"
+                       ngrequired="true">
+                </radios>
+
+                <field model="user.level"
+                       type="select"
+                       label="lang.level.label"
+                       options="lang.level.options"
+                       ngrequired="true">
+                </field>
+
+                <field model="user.address"
+                       type="textarea"
+                       label="lang.address.label"
+                       placeholder="lang.address.placeholder"
+                       ngrequired="true">
+                </field>
+
+                <password model="user.password"
+                       label="lang.pass.label"
+                       placeholder="******"
+                       type="password"
+                       ngrequired="true"
+                       match="user.password2" 
+                       lengthmin="6">
+                </password>
+
+                <password model="user.password2"
+                       label="lang.repass.label"
+                       placeholder="******"
+                       type="password"
+                       ngrequired="true"
+                       match="user.password" 
+                       lengthmin="6">
+                </password>
+                    
+                    <p><strong><a href="">{{ lang.terms.label }}</a></strong></p>
+
+                    <field model="user.terminos"
+                           type="checkbox"
+                           label="lang.terminos.iagree"
+                           ngrequired="true">
+                    </field>
+
+                    <button ng-class="{ 'disabled' : form.$invalid }" ng-click="register(user)" class="btn btn-primary"> {{ lang.btnregister.text }} </button>
+
+        </form>
+    </div>
+
+</section>
+
+
+
