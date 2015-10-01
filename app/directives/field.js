@@ -108,37 +108,18 @@ App.directive('password', function (FieldBuilder, FieldModernizr) {
 
                     if (scope.match) {
 
-                        if (scope.required) {
-
-                            scope.field.$setValidity('match', scope.model == scope.match);
-
-                        }
-
-                        else{
-
-                            scope.field.$setValidity('match', (scope.model == scope.match) || (scope.model.length == 0) );
-
-                        }
+                            scope.field.$setValidity('match', (scope.model == scope.match) || ((scope.model.length == 0) && (scope.ngrequired == 'false')) );
 
                     }
 
                     if (scope.lengthmin) {
 
-                        if (scope.required) {                        
-
-                            scope.field.$setValidity('lengthmin', scope.model.length >= scope.lengthmin);
-
-                        }
-
-                        else{
-
-                            scope.field.$setValidity('lengthmin', (scope.model.length >= scope.lengthmin) || (scope.model.length == 0) ); 
-
-                        }
+                            scope.field.$setValidity('lengthmin', (scope.model.length >= scope.lengthmin) || ((scope.model.length == 0) && (scope.ngrequired == 'false')) ); 
 
                     }
 
                     scope.field.message = FieldBuilder.getErrorMessage(scope.field.$error, attrs);
+
                 }, true);
 
             }
